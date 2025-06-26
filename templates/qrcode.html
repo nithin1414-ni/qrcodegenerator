@@ -35,7 +35,7 @@
             const url=imagename.src;
             fetch(url).then(res => res.blob).then(blob=>
                 {
-                    const file = new file([blob],'qrcode.png',{type:'img/png'});
+                    const file = new File([blob],'qrcode.png',{type:'img/png'});
                     if(navigator.share){
                         navigator.share(
                             {
